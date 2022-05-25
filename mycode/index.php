@@ -18,19 +18,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script> <!--for navbar-->
 </head>
 
 <body>
 
 
-
 <script id="replace_with_navbar" src="nav.js"></script>
 
-<a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
 
 
-    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
 <div id="myform">
     <b>Simple form with name and Timezone ...</b>
     <table>
