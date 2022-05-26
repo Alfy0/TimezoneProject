@@ -59,21 +59,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <tr>
             <td>[you]</td>
             <td><?php echo htmlspecialchars($_SESSION["username"]); ?></td>
-            <td>Timezone</td>
+            <td>[Timezone]</td>
             <td><div id="txt"></td>
         </tr>
     </table>
     &nbsp;
+    <input type="button" id="save-table" value="Save" onclick=""></td>
      
     </div>
-    <div id="myDynamicTable">
+<!--    <div id="myDynamicTable">
     <input type="button" id="create" value="Click here" onclick="Javascript:addTable()">
     to create a Table and add some data using JavaScript
-</div>
+</div> -->
 
 
 
-  <!-- <div id="map"></div> -->
+<div id="map"></div>
 
     <!--Spør om:
 
@@ -89,12 +90,13 @@ når timezone blir valgt, sync til den endra tiden.
     <script src="timezone-map.js"></script>
     <script src="friend-table.js"></script>
     <link href="../node_modules/select2/dist/css/select2.min.css" rel="stylesheet"> <!-- Optional -->
-    <link href="../node_modules/timezone-picker/dist/styles/timezone-picker.css" rel="stylesheet">
+    <link href="../node_modules/timezone-picker/dist/styles/timezone-picker.css" rel="stylesheet"> -->
     <script type="text/javascript" src="../node_modules/moment-timezone/moment-timezone.js"></script>
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../node_modules/select2/dist/js/select2.min.js"></script> <!-- Optional -->
     <script type="text/javascript" src="../node_modules/timezone-picker/dist/timezone-picker.min.js"></script>
     <script src="live-time-update.js"></script>
+    
 </body>
 
 
