@@ -3,6 +3,7 @@ function addRow() {
     var myName = document.getElementById("name");
     var timezone = document.getElementById("timezone");
     var table = document.getElementById("myTableData");
+   var time = moment().format('MMMM Do YYYY, h:mm:ss a');
  
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
@@ -10,6 +11,7 @@ function addRow() {
     row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
     row.insertCell(1).innerHTML= myName.value;
     row.insertCell(2).innerHTML= timezone.value;
+    row.insertCell(3).innerHTML= time.value;
  
 }
  

@@ -20,11 +20,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
+<body onload="startTime()">
 
 <script id="replace_with_navbar" src="nav.js"></script>
 
+
+<?php echo date('m/d/Y g:i:sa') . '<br>'; ?>
 
 
 <div id="myform">
@@ -35,9 +36,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <td><input type="text" id="name"></td>
         </tr>
         <tr>
-            <td>imezone:</td>
+            <td>Timezone:</td>
             <td><input type="text" id="timezone">
             <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
+            
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -52,6 +54,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <td>&nbsp;</td>
             <td><b>Name</b></td>
             <td><b>Timezone</b></td>
+            <td><b>Time</b></td>
+        </tr>
+        <tr>
+            <td>[you]</td>
+            <td><?php echo htmlspecialchars($_SESSION["username"]); ?></td>
+            <td>Timezone</td>
+            <td><div id="txt"></td>
         </tr>
     </table>
     &nbsp;
@@ -64,7 +73,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 
 
-   <div id="map"></div>
+  <!-- <div id="map"></div> -->
 
     <!--Spør om:
 
@@ -85,6 +94,7 @@ når timezone blir valgt, sync til den endra tiden.
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../node_modules/select2/dist/js/select2.min.js"></script> <!-- Optional -->
     <script type="text/javascript" src="../node_modules/timezone-picker/dist/timezone-picker.min.js"></script>
+    <script src="live-time-update.js"></script>
 </body>
 
 
